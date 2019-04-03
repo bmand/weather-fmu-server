@@ -22,7 +22,7 @@ services:
   # The mariadb service
   # ---------------------
   mariadb:
-    image: 'bitnami/mariadb:10.1.37'
+    image: 'bitnami/mariadb:10.1.38'
     hostname: "mariadb"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "--silent"]
