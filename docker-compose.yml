@@ -44,7 +44,7 @@ services:
   # The hawkbit service
   # ---------------------
   hawkbit:
-    image: 'fullmetalupdate/hawkbit:v1.0'
+    image: 'weatherfmu/hawkbit:latest'
     hostname: "hawkbit"
     links:
         - mariadb
@@ -57,6 +57,7 @@ services:
       - 'SPRING_DATASOURCE_USERNAME=hawkbit'
       - 'SPRING_DATASOURCE_PASSWORD=hawkbit'
       - 'SPRING_JPA_DATABASE=MYSQL'
+      - 'SPRING_MAIN_ALLOWBEANDEFINITIONOVERRIDING=true'
     expose:
       - "8080"
     ports:
