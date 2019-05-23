@@ -40,7 +40,7 @@ if command -V $PIP_FOR_FMU_SERVER &>/dev/null; then
 		source "$PATH_VENV/activate"
     fi
     # Start the server
-    docker-compose up
+    docker-compose up --remove-orphans
 else
     echo 'Please install $PIP_FOR_FMU_SERVER to run this script'
     exit
