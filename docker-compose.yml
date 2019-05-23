@@ -22,10 +22,10 @@ services:
   # The mariadb service
   # ---------------------
   mariadb:
-    image: 'bitnami/mariadb:10.1.38'
+    image: 'bitnami/mariadb:10.3'
     hostname: "mariadb"
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "--silent"]
+      test: ["CMD", "mysqladmin", "ping", "--silent", "--user=hawkbit", "--password=hawkbit"]
     environment:
       - MARIADB_USER=hawkbit
       - MARIADB_PASSWORD=hawkbit
